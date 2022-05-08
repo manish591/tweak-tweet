@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import { Actions, Navbar, Output } from 'components';
 
 const App = () => {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Navbar />
+      <Output />
+      <Actions />
     </div>
   );
 };
 
-export default App;
+export { App };
