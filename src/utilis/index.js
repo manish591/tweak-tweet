@@ -1,0 +1,1 @@
+export { getTwitterPostId } from './getTwitterPostId';
