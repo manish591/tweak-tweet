@@ -10,6 +10,7 @@ const apiURL = '/.netlify/functions/node-fetch';
 const authAxios = axios.create({
   baseURL: apiURL,
   headers: {
+    Accept: 'Accept: application/json',
     Authorization: `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}`,
   },
 });
