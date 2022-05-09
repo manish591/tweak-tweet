@@ -6,10 +6,10 @@ const Card = () => {
     useStateContext();
   return (
     <section
-      className="overflow-hidden overflow-x-auto min-w-[600px] min-h-[150px] m-auto rounded-md max-w-[1200px] my-28 shadow-2xl text-black"
+      className=" m-auto rounded-md my-28 shadow-2xl text-black"
       ref={downloadRef}>
       <div
-        className="py-28 bg-gray-100 px-5"
+        className="py-28 bg-gray-100 px-5 overflow-hidden overflow-x-auto"
         style={{
           backgroundRepeat: 'no-repeat',
           borderBottomRightRadius: '1px',
@@ -17,7 +17,7 @@ const Card = () => {
           backgroundImage: `url(${imageUrl})`,
         }}>
         <div
-          className={`grid rounded-xl shadow-lg bg-white w-11/12 max-w-[55%] m-auto backdrop-blur-3xl transition-colors duration-300 ${
+          className={`grid rounded-xl shadow-lg bg-white w-11/12 w-full md:max-w-[55%] m-auto backdrop-blur-3xl transition-colors duration-300 ${
             cardTheme === 'dark' && 'bg-[#191919] text-[#ecdbba]'
           }`}>
           <div className="grid gap-5 p-4">

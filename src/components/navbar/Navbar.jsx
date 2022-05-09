@@ -10,13 +10,6 @@ const Navbar = () => {
             Tweaky-Tweet
           </li>
         </ul>
-        <ul className="md:hidden">
-          <li>
-            <div className="flex justify-between items-center">
-              <span className="material-icons-outlined">search</span>
-            </div>
-          </li>
-        </ul>
         <SearchBar />
         <ul className="flex items-center gap-7 hidden md:flex">
           <li className="w-7 h-7">

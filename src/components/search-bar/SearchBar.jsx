@@ -12,7 +12,7 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleFetchTwitterUserData} className="hidden md:block">
+    <form onSubmit={handleFetchTwitterUserData} className="md:block">
       <label htmlFor="url" className="sr-only">
         search
       </label>
@@ -21,7 +21,7 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Enter twitter post url here"
-          className="w-96 outline-none bg-transparent"
+          className="w-28 md:w-96 outline-none bg-transparent"
           value={twitterPostUrl}
           onChange={(e) => {
             setTwitterPostUrl(e.target.value);
