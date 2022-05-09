@@ -2,7 +2,7 @@ import React from 'react';
 import { useStateContext } from 'hooks';
 
 const Card = () => {
-  const { userData, downloadRef, cardTheme, showCardMetrics } =
+  const { userData, downloadRef, cardTheme, showCardMetrics, imageUrl } =
     useStateContext();
   return (
     <section
@@ -11,13 +11,10 @@ const Card = () => {
       <div
         className="py-28 bg-gray-100 px-5"
         style={{
-          // backgroundImage:
-          //   'linear-gradient(355deg, hsl(290deg 100% 69%) 0%,hsl(290deg 100% 73%) 0%,hsl(290deg 100% 77%) 1%,hsl(290deg 100% 81%) 4%,hsl(290deg 100% 85%) 9%,hsl(290deg 100% 89%) 19%,hsl(290deg 100% 92%) 44%,hsl(290deg 100% 96%) 90%,hsl(0deg 0% 100%) 100%)',
           backgroundRepeat: 'no-repeat',
           borderBottomRightRadius: '1px',
           backgroundSize: 'cover',
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=2400&q=60")',
+          backgroundImage: `url(${imageUrl})`,
         }}>
         <div
           className={`grid rounded-xl shadow-lg bg-white w-11/12 max-w-[55%] m-auto backdrop-blur-3xl transition-colors duration-300 ${

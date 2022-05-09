@@ -9,14 +9,18 @@ const Actions = () => {
     cardTheme,
     setShowCardMetrics,
     showCardMetrics,
+    setShowUnsplacePage,
   } = useStateContext();
   return (
     <div className="fixed bottom-0 left-0 z-[10] w-full md:bottom-20 bg-[#2D4263] md:bg-transparent text-[#ECDBBA]">
       <section className="flex items-center py-2 justify-between w-11/12 m-auto bg-[#2D4263] text-center md:w-max m-auto md:gap-4 md:px-4">
-        <div className="py-2 px-2 md:px-3 rounded-md hover:bg-gray-500 cursor-pointer transition-colors flex-col justify-center items-center">
+        <button
+          type="button"
+          className="py-2 px-2 md:px-3 rounded-md hover:bg-gray-500 cursor-pointer transition-colors flex-col justify-center items-center"
+          onClick={() => setShowUnsplacePage((sup) => !sup)}>
           <span className="material-icons-outlined">palette</span>
-          <p className="text-xs">Color</p>
-        </div>
+          <p className="text-xs">BG</p>
+        </button>
         <button
           type="button"
           className="py-2 px-2 md:px-3 rounded-md hover:bg-gray-500 cursor-pointer transition-colors flex-col justify-center items-center"
@@ -47,10 +51,12 @@ const Actions = () => {
           <span className="material-icons-outlined">crop</span>
           <p className="text-xs">Size</p>
         </div>
-        <div className="py-2 px-2 md:px-3 rounded-md hover:bg-gray-500 cursor-pointer transition-colors flex-col justify-center items-center">
+        <button
+          type="button"
+          className="py-2 px-2 md:px-3 rounded-md hover:bg-gray-500 cursor-pointer transition-colors flex-col justify-center items-center">
           <span className="material-icons-outlined">add</span>
           <p className="text-xs">More</p>
-        </div>
+        </button>
         <button
           type="button"
           className="py-2 px-2 md:px-3 cursor-pointer transition-colors flex-col justify-center items-center bg-[#C84B31] rounded-xl text-white"
