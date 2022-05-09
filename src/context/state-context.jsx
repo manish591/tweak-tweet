@@ -17,8 +17,12 @@ const authAxios = axios.create({
 
 const StateContextProvider = ({ children }) => {
   const [twitterPostUrl, setTwitterPostUrl] = useState('');
+  const [showUnsplacePage, setShowUnsplacePage] = useState(false);
   const [cardTheme, setCardTheme] = useState('light');
   const [showCardMetrics, setShowCardMetrics] = useState(true);
+  const [imageUrl, setImageUrl] = useState(
+    'https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG5hdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=2400&q=60',
+  );
   const downloadRef = useRef();
   const [userData, setUserData] = useState({
     data: {
@@ -72,6 +76,10 @@ const StateContextProvider = ({ children }) => {
         setCardTheme,
         setShowCardMetrics,
         showCardMetrics,
+        showUnsplacePage,
+        setShowUnsplacePage,
+        imageUrl,
+        setImageUrl,
       }}>
       {children}
     </StateContext.Provider>
